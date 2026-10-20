@@ -201,3 +201,25 @@ footer {
 }
 
 
+
+
+// Images inside project pages should never overflow the page column
+main p > img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Gallery tile for projects that do not have an image yet
+.gallery-placeholder {
+  width: 100%;
+  height: 85%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: $primary-color;
+  color: $background-color;
+  font-size: .9rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

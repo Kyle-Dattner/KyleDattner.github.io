@@ -4,12 +4,14 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 
+{% if page.image %}
 <p><img src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}" class="project-image" /></p>
+{% endif %}
 
 {{ content }}
 
 <p><strong>Technologies Used</strong>: {{ page.technologies | join: ", " }}</p>
 
-<a href={{ "/projects/" | relative_url }} class="back-arrow">
-    <i class="bi bi-arrow-left-circle-fill"></i> Back to Projects
+<a href="{{ page.back_url | default: "/projects/" | relative_url }}" class="back-arrow">
+    <i class="bi bi-arrow-left-circle-fill"></i> {{ page.back_text | default: "Back to Projects" }}
 </a>
