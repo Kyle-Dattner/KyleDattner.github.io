@@ -13,7 +13,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : Kyle Dattner
 description              : Kyle Dattner - Projects and CV 
-baseurl                  : "/portfolio-Kyle-Dattner" # Set this to your repo name 
+baseurl                  : "/KyleDattner.github.io" # Set this to your repo name 
 
 # Theme and Style
 theme: jekyll-theme-minimal
