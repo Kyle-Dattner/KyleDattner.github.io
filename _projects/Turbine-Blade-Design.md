@@ -1,6 +1,6 @@
 ---
 layout: project
-title: 4272 Turbine Blade Design
+title: MAE 4272 Turbine Blade Design
 description: Designed a full turbine blade in Autodesk Fusion by lofting airfoil cross sections defined at stations along the span, with variable chord and pitch angle. The blade is designed for 3D printing and wind tunnel testing.
 technologies: [Autodesk Fusion, 3D Printing]
 image: /assets/images/turbine-blade-isometric.jpg

@@ -1,37 +1,38 @@
 ---
 layout: project
 title: Torque Wrench Design and Ansys FEM
-description: Designed a torque wrench and chose a suitable material based on analytical calculations. Created a CAD model of the wrench and used Ansys to perform a FEM of the wrench under torque.
-technologies: [Autodesk Fusion, Ansys, Matlab]
-image: {{ "/assets/images/Wrench-FEM-Deformation.png" | relative_url }}
+description: Designed a torque wrench and selected a suitable material using analytical calculations. Built a CAD model of the wrench and used Ansys to run a finite element analysis (FEA) of it under torque.
+technologies: [Autodesk Fusion, Ansys, MATLAB]
+image: /assets/images/wrench-cover.jpg
+imagealt: Ansys deformation contours of the torque wrench
 ---
 
-For a class, I was tasked with designing a torque-wrench to meet certain specifications at a given maximum torque. I iterated using analytical calculations to find the necessary material and wrench dimensions to satisfy my specifications, and then I used CAD software to create a model of my chosen design. Using Ansys, I performed an FEM analysis of my design with the given applied force, applying boundary conditions and carefully analyzing and recording the results with several material metrics. By comparing the results of my FEM analysis to the results of my hand calculations, I gained an understanding of the limits of hand calculations, as well as the use cases of FEM analysis. Finally, I performed several mesh refinement studies to look at the impact of mesh size on the results of the FEM analysis.
+For a class, I designed a torque wrench to meet a set of specifications at a given maximum torque. I iterated on analytical calculations to find the material and wrench dimensions that satisfied those specifications, then built a CAD model of the chosen design. In Ansys, I ran a finite element analysis (FEA) of the design under the specified load, applying boundary conditions and recording the results using several stress, strain, and deformation metrics. Comparing the FEA results to my hand calculations showed me the limits of hand calculations and where FEA is most useful. Finally, I ran several mesh refinement studies to measure how mesh size affects the results.
 
-A look at the CAD model I designed. It is a fairly simplistic model, lacking complex geometry and contours that would be present on an actual wrench, however this enabled me to readily perform hand calculations of the design.
+Below is the CAD model I designed. It is deliberately simple and lacks the complex geometry and contours of a real wrench, which allowed me to verify the design with hand calculations.
 
 ![CAD Model]({{ "/assets/images/Wrench-CAD-Model.png" | relative_url }})
 
-The material used in my wrench design is an aluminum alloy, Aluminum 7010-T7451. Material selection was done iteratively, looking at several different families of alloys and narrowing down possibilities using material properties. The aluminum alloy chosen is ideal for several reasons. It has a fairly high yield strength relative to other aluminum alloys, allowing us to achieve the desired safety factor for yield. However, its Young's Modulus is at a reasonable 10.5e3 ksi, which allows larger deformation and the strain gauge placed on the wrench to achieve the minimum required output. Finally, the fracture toughness and fatigue strength are high enough to achieve the desired safety factors respectively.
+The wrench is made of aluminum alloy 7010-T7451. I selected the material iteratively, comparing several alloy families and narrowing the options using material properties. This alloy is a good fit for several reasons. Its yield strength is high relative to other aluminum alloys, which achieves the desired safety factor against yielding. Its Young's modulus of 10.5e3 ksi is low enough to allow the deformation the strain gauge needs to reach its minimum required output. Finally, its fracture toughness and fatigue strength are high enough to meet the desired safety factors for fracture and fatigue.
 
-The load was applied distributively over the end surface over the wrench, using F = M/L to calculate the necessary magnitude to achieve the desired moment. Boundary conditions were imposed to dictate no rotation at the wrench drive.
+The load was applied as a distributed load over the end surface of the wrench, with its magnitude calculated from F = M/L to produce the desired moment. A boundary condition at the wrench drive prevents rotation.
 
 ![Load and Boundary Conditions]({{ "/assets/images/Wrench-Boundary-Condition-Analysis.png" | relative_url }})
 
-Normal strain contours are shown here:
+Normal strain contours:
 
 ![Normal Strain Contours]({{ "/assets/images/Wrench-FEM-Normal-Strain.png" | relative_url }})
 
-Maximum principal stress contours are shown here:
+Maximum principal stress contours:
 
 ![Max Principal Stress Contours]({{ "/assets/images/Wrench-FEM-Maximum-Principal-Stress-Contours.png" | relative_url }})
 
-Maximum normal stress contours are shown here, with the maximum normal stress occurring at stress concentration locations on and at the base of the wrench drive:
+Normal stress contours. The maximum normal stress occurs at stress concentrations on and at the base of the wrench drive:
 
 ![Max Normal Stress Contours]({{ "/assets/images/Wrench-FEM-Normal-Stress.png" | relative_url }})
 
-Load point deflection is shown here, with greatest deflection occurring on the end where the load is applied, as expected:
+Deflection of the wrench. As expected, the greatest deflection occurs at the end where the load is applied:
 
 ![Load Point Deflection]({{ "/assets/images/Wrench-FEM-Deformation.png" | relative_url }})
 
-I chose the SGD-1.5/120-LY11 strain gauge from Omega Engineering. It is a linear strain gauge with a size of 4.7mm, which will fit within the area of the wrench where it will be placed. The strain at the gauge ends up being very similar to the results of my hand calculations, with a strain of 0.001, which corresponds to 1.039 mV/V.
+I chose the SGD-1.5/120-LY11 linear strain gauge from Omega Engineering. At 4.7 mm, it fits within the area of the wrench where it will be placed. The strain at the gauge is very close to my hand calculations at 0.001, which corresponds to an output of 1.039 mV/V.

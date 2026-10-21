@@ -3,7 +3,8 @@ layout: project
 title: ASTRA Lab COMET Chamber (In Progress)
 description: Ongoing undergraduate research at the ASTRA Lab designing the Cornell Orbital Material Environmental Testing (COMET) chamber, which simulates space temperature and radiation conditions for material testing.
 technologies: [System Design, Component Selection, Literature Review]
-imagealt: ASTRA Lab COMET chamber project
+image: /assets/images/astra-lab-logo.jpg
+imagealt: ASTRA Lab logo
 ---
 
 **This project is a work in progress. More will be added as it develops.**
