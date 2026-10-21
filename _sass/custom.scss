@@ -223,3 +223,32 @@ main p > img {
   font-size: .9rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+// CV page
+.cv h4 {
+  margin: 1.6em 0 .6em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid $text-color;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: .95rem;
+}
+
+.cv-contact { margin: 0 0 1em; }
+
+.cv-entry { margin-bottom: 1.1em; }
+
+.cv-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.cv-org { font-weight: bold; }
+
+.cv-sub { font-style: italic; }
+
+.cv-entry ul { margin: .3em 0 0; padding-left: 1.2em; }
+
+.cv-entry li { margin-bottom: .2em; }

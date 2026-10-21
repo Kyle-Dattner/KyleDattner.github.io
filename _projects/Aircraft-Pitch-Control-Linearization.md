@@ -1,12 +1,12 @@
 ---
 layout: project
 title: Aircraft Pitch Control Linearization
-description: This was a group project done for the class MAE 3260. We selected to analyze aircraft pitch control, its linearization, design requirements, model simplifications, state space modeling, and the resulting transfer functions.
-technologies: [SolidWorks, Machining]
+description: Group project for MAE 3260. We analyzed aircraft pitch control, including its linearization, design requirements, model simplifications, state-space modeling, and the resulting transfer functions.
+technologies: [MATLAB, State-Space Modeling]
 image: /assets/images/Aircraft-Pitch-Angle.png
 ---
 
 
-Acknowledgements: This was a group project, with work on this project done in collaboration with Michelle Mobius, Audrey Garon, and Parker McLaughlin. This project was a preliminary research piece into aircraft pitch control, not intended to be a defining paper on the subject but rather an initial inquiry into the topic and how system dynamics principles and concepts can be applied.
+**Acknowledgements:** This was a group project completed in collaboration with Michelle Mobius, Audrey Garon, and Parker McLaughlin. It was a preliminary investigation into aircraft pitch control and how system dynamics principles can be applied to it, not a definitive study of the subject.
 
-[Download my Report]({{ "/assets/MAE3260-final-groupwork-report.pdf" | relative_url }}) in PDF format.
+[Download the report]({{ "/assets/MAE3260-final-groupwork-report.pdf" | relative_url }}) (PDF).
